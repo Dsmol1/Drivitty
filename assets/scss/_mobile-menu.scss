@@ -1,0 +1,270 @@
+#mobile-menu {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background: #3c388b;
+  z-index: 2;
+  .logo {
+    img {
+      width: 60%;
+    }
+  }
+}
+.flex-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.outer-menu {
+  position: fixed;
+  top: 0;
+  right: 60px;
+  z-index: 1;
+
+  .checkbox-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+
+    &:checked {
+      + .hamburger > div {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+
+        &:before {
+          top: 0;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          display: block;
+        }
+
+        &:after {
+          top: 0;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          display: block;
+          opacity: 0;
+          display: block;
+        }
+      }
+
+      ~ .menu {
+        pointer-events: auto;
+        visibility: visible;
+
+        > div {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+
+          > div {
+            opacity: 1;
+            -webkit-transition: opacity 0.4s ease 0.4s;
+            transition: opacity 0.4s ease 0.4s;
+          }
+        }
+      }
+
+      &:hover + .hamburger > div {
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+      }
+    }
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 0.5em 1em;
+    background: transparent;
+    border-radius: 0 0.12em 0.12em 0;
+    cursor: pointer;
+    -webkit-transition: box-shadow 0.4s ease;
+    transition: box-shadow 0.4s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+    > div {
+      position: relative;
+      -webkit-box-flex: 0;
+      flex: none;
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: inherit;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        display: block;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: inherit;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        display: block;
+        top: 10px;
+      }
+    }
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    outline: 1px solid transparent;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+    > div {
+      width: 200vw;
+      height: 200vw;
+      color: #fefefe;
+      background: rgba(41, 98, 255, 0.97);
+      background-color: rgb(25, 21, 97);
+
+      // Old browsers
+      background: #191561;
+      background: -moz-linear-gradient(71deg, #191561 43%, #ed5b24 85%);
+      background: -webkit-linear-gradient(71deg, #191561 43%, #ed5b24 85%);
+      background: linear-gradient(71deg #191561 43%, #ed5b24 85%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191561', endColorstr='#ed5b24',GradientType=0 );
+      border-radius: 50%;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      -webkit-box-flex: 0;
+      flex: none;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      overflow: hidden;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+
+      > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        -webkit-transition: opacity 0.4s ease;
+        transition: opacity 0.4s ease;
+        overflow-y: auto;
+        -webkit-box-flex: 0;
+        flex: none;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+
+        > ul {
+          list-style: none;
+          padding: 0 1em;
+          margin: 0;
+          display: block;
+          max-height: 100vh;
+
+          > li {
+            padding: 0;
+            margin: 1em;
+            font-size: 24px;
+            display: block;
+
+            > a {
+              display: inline;
+              -webkit-transition: color 0.4s ease;
+              transition: color 0.4s ease;
+
+              &:hover {
+                color: #e5e5e5;
+
+                &:after {
+                  width: 100%;
+                }
+              }
+
+              &:after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                bottom: -0.15em;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #e5e5e5;
+                -webkit-transition: width 0.4s ease;
+                transition: width 0.4s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.logged-in .outer-menu .hamburger,
+.logged-in .outer-menu .checkbox-toggle
+{
+ top:45px !important;
+}

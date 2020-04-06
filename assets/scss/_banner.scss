@@ -1,0 +1,92 @@
+section#banner {
+  height: 100vh;
+  padding-top: 4rem;
+  @include responsive(lg) {
+    padding: 0;
+  }
+  background-image: url('../images/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  @media screen and (orientation:landscape) and (min-device-width: 319px) and (max-device-width: 991px) {
+    height: 150vh !important;
+  }
+  .header {
+    &__logo {
+      width: 70%;
+      @include responsive(xs) {
+        width: initial;
+      }
+      img {
+        width: 100%;
+        @include responsive(lg) {
+          width: 90%;
+        }
+      }
+    }
+
+    &__profile {
+      text-align: center;
+      @include responsive(lg) {
+        text-align: left;
+      }
+    }
+
+    &__list a{
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 400;
+      &:hover {
+        text-decoration: none;
+        color: $text-secondary
+      }
+    }
+
+    &__get-app {
+      text-align: center;
+      @include responsive(lg) {
+        text-align: left;
+      }
+    }
+  }
+
+  .hero {
+    margin-top: 2rem;
+    @include responsive(lg) {
+      margin-top: 1.5rem;
+    }
+    &__bg img {
+      display: none;
+      @include responsive(md) {
+        display: block
+      }
+    }
+    &__overview {
+
+      &__title {
+        font-weight:600;
+        font-size: 28px;
+        text-align: center;
+        @include responsive(lg) {
+          text-align: left;
+          font-size: 48px;
+        }
+      }
+
+      &__description{
+        text-align: center;
+        color: $text-secondary;
+        font-size: 12px;
+        @include responsive(lg) {
+          text-align: left;
+          font-size: 16px;
+        }
+      }
+
+      &__list img {
+        width: 100%;
+      }
+    }
+  }
+}

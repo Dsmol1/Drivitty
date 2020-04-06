@@ -1,0 +1,74 @@
+section#tabs {
+  .tabs {
+    &__card {
+      &__number {
+        color: $text-tertiary;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      &__title {
+        color: #fff;
+        font-size: 42px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      &__description {
+        color: $text-secondary;
+        font-size: 90%;
+        min-height: 40px;
+      }
+    }
+
+    &__phone img {
+      margin-left: 2.5rem;
+      top: calc(-100% + 1rem);
+      @media (min-width: 1199px) {
+        top: calc(-100% - 2rem);
+      }
+    }
+
+    &__nav {
+      margin-top: 1rem;
+      position: relative;
+      @include responsive(lg) {
+        margin-top: 4rem;
+      }
+    }
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+      color: #f15c23 !important;
+      background-color: transparent;
+      border-color: transparent transparent #7a7fbd;
+      border-bottom: 4px solid #7a7fbd !important;
+      font-size: 90% !important;
+      font-weight: bold;
+      margin: 0;
+      opacity: 1 !important;
+      }
+
+    .nav-tabs .nav-link {
+      font-size: 90% !important;
+      margin: 0;
+      text-align: left;
+      border-bottom: 4px solid transparent;
+      color: transparent;
+      font-weight: bold;
+      padding: 0;
+      transition: .4s;
+      color: #f15c23 !important;
+      background-color: transparent;
+      border-color: transparent transparent #7a7fbd;
+      border-bottom: 4px solid #7a7fbd !important;
+      opacity: .4;
+
+    &:hover {
+      border-color: transparent;
+      border-bottom: 4px solid #7a7fbd;
+      color: #f15c23;
+      opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+#features {
+  .features {
+    .slick-next,
+    .slick-prev {
+      &:before {
+        color: $text-tertiary;
+      }
+    }
+    &__slider-wrapper {
+      visibility: hidden;
+      background: $bg-dark;
+    }
+    &__slide {
+      text-align: center;
+      padding: 1.5rem;
+      a {
+        color: $text-primary;
+        background: #eeedf1;
+        transition: all .3s;
+        &:hover {
+          text-decoration: none;
+          background: darken(#eeedf1, 10%);
+          color: lighten($text-primary, 10%);
+        }
+        &:focus {
+          outline: none
+        }
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+    .slick-dots {
+      li button {
+        &:hover:before {
+          color: $text-tertiary
+        }
+        &:before {
+          font-size: 10px;
+        }
+      }
+      li.slick-active button {
+        &:before {
+          color: $text-tertiary
+        }
+      }
+    }
+  }
+  .slick-initialized {
+    visibility: visible !important;
+  }
+}

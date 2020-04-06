@@ -1,0 +1,72 @@
+#faq {
+  .faq {
+    h2 {
+      font-weight: 600;
+    }
+    &__list {
+      color: $text-primary;
+      .left-col .faq__list__item:not(:first-child) .q-wrapper {
+        border-top: 2px solid $bg-light-gray;
+      }
+      .right-col .faq__list__item .q-wrapper {
+        border-top: 2px solid $bg-light-gray;
+      }
+      @include responsive(lg) {
+        .right-col .faq__list__item:first-child .q-wrapper {
+          border-top: none;
+        }
+      }
+
+      &__item {
+        h4:first-child {
+          margin-bottom: .5rem;
+          margin-right: .5rem;
+          font-weight: 600;
+        }
+        p:first-child {
+          padding-right: .25rem;
+        }
+        a {
+          display: block;
+          text-decoration: none;
+          font-size: 1.1rem;
+          &:hover {
+            color: inherit;
+          }
+        }
+        .panel-group {
+          padding-top: .5rem;
+          a {
+            padding: .25rem 2rem .25rem 0;
+            display: inline-block;
+          }
+          .panel-body {
+            padding: .25rem 0 1rem 0;
+            font-size: 80%
+          }
+        }
+      }
+    }
+  }
+}
+
+// arrows
+.panel-title > a,
+.panel > a
+ {
+  display: block;
+  position: relative;
+}
+.panel-title > a:after,
+.panel > a:after
+ {
+  content: "\f078"; /* fa-chevron-down */
+  font-family: 'FontAwesome';
+  position: absolute;
+  right: 0;
+}
+.panel-title > a[aria-expanded="true"]:after,
+.panel > a[aria-expanded="true"]:after,
+ {
+  content: "\f077"; /* fa-chevron-up */
+}

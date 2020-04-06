@@ -1,0 +1,16 @@
+// colors
+$text-primary: #3c388b;
+$text-secondary: #bfbad2;
+$text-tertiary: #f15c23;
+$bg-dark: #3c388b;
+$bg-light: #7a7fbd;
+$bg-light-gray: #eeedf1;
+
+// Backgrounds
+.bg-dark {
+  background-color: $bg-dark !important;
+}
+
+.text-primary {
+  color: $text-primary !important;
+}

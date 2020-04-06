@@ -1,0 +1,67 @@
+section#product-features {
+  .features {
+    &__list {
+      color: $text-primary;
+      columns: 1;
+      -webkit-columns: 1;
+      -moz-columns: 1;
+      column-gap: 5rem;
+      @include responsive(sm) {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+      }
+      @include responsive(lg) {
+        column-gap: 7rem;
+        padding: 0 15px;
+      }
+      &__item {
+        // min-height: 160px;
+        text-align: center;
+        &--height {
+          min-height: 70px;
+          @include responsive(lg) {
+            min-height: 50px;
+            min-height: 65px\0/ !important;
+          }
+        }
+        @include responsive(lg) {
+          // min-height: 200px;
+          text-align: left;
+          @include responsive(xl) {
+            // min-height: 150px;
+            text-align: left;
+          }
+        }
+        img {
+          width: 40px;
+          margin: 0 auto;
+          @include responsive(lg) {
+            margin: inherit
+          }
+        }
+        h5 {
+          font-weight: 600;
+        }
+        p {
+          min-height: 80px;
+        }
+      }
+    }
+    &__phone {
+      img {
+        width: 50%;
+        width: 50%\0/ !important;
+        margin-left: 2.6rem;
+        @include responsive(md) {
+          margin-left: 4.6rem;
+        }
+        @include responsive(lg) {
+          width: initial;
+          width: 100%\0/ !important;
+          margin-left: 0
+        }
+      }
+    }
+  }
+}

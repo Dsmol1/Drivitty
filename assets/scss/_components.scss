@@ -1,0 +1,123 @@
+// Btns
+.button {
+  color: $text-secondary;
+  border-radius: 20px;
+  border: none;
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+  border:1px solid transparent;
+  outline: 0;
+  background: #fff;
+  a {
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+    @include responsive(xl) {
+      font-size: inherit
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, .5);
+  }
+
+  &--active {
+    background: #7a7fbd;
+    position: relative;
+    -webkit-box-shadow: 15px 26px 60px 0px rgba(59,55,139,0.24);
+    -moz-box-shadow: 15px 26px 60px 0px rgba(59,55,139,0.24);
+    box-shadow: 15px 26px 60px 0px rgba(59,55,139,0.24);
+  }
+  &--inactive {
+    z-index: -1;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: .5rem 2rem .5rem 4rem;
+    margin-left: -2.6rem;
+  }
+
+  &--get-app {
+    color: $text-tertiary;
+    padding: .5rem 1rem;
+    -webkit-box-shadow: 15px 26px 60px 0px rgba(59,55,139,0.24);
+    -moz-box-shadow: 15px 26px 60px 0px rgba(59,55,139,0.24);
+    box-shadow: 15px 26px 60px 0px rgba(59,55,139,0.24);
+    @include responsive(xl) {
+      padding: .5rem 2.5rem;
+      font-size: inherit;
+    }
+  }
+}
+
+.button-personal.button--inactive {
+  padding: .5rem 4rem .5rem 2rem;
+  margin-left: 0;
+  margin-right: -2.5rem;
+}
+
+.secondary-menu ul li {
+  display: inline-block;
+}
+.secondary-menu li a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+// modal
+.modal-placeholder {
+  max-width: 85vw;
+  max-height: 60vw;
+  height: 390px;
+  background: gray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  padding: 60px 30px;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.close-btn span {
+  color: #fff;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+// scroll down
+.scroll-btn {
+  display: none;
+  @include responsive(lg) {
+    display: block;
+  }
+}
+
+.scroll-btn{
+  position: absolute;
+  bottom: 13px;
+  cursor: pointer;
+  width: 105px;
+  text-align: center;
+}
+
+.scroll-btn a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+}
+.line {
+  width: 23px;
+  height: 1px;
+  background-color: #fff;
+  transform: rotate(90deg);
+  margin-top: 20px;
+  margin-left: 40px;
+  position: relative;
+}

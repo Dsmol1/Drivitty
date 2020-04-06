@@ -1,0 +1,17 @@
+// Setup
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import "reset";
+@import "media";
+@import "colors";
+@import "components";
+@import "shapes";
+@import "globals";
+
+// Parts
+@import "mobile-menu";
+@import "banner";
+@import "features";
+@import "tabs";
+@import "faq";
+@import "slider";
+@import "footer";

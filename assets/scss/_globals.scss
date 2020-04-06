@@ -1,0 +1,46 @@
+html {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.preload * {
+ -webkit-transition: none !important;
+ -moz-transition: none !important;
+ -ms-transition: none !important;
+ -o-transition: none !important;
+}
+
+.flex-auto {
+  flex: auto
+}
+
+.get-app {
+  transform: rotate(-90deg);
+  position: absolute;
+  @include responsive(xl) {
+    display: block;
+    left: -107px;
+    bottom: 10rem;
+    @include responsive(xxl) {
+      display: block;
+      left: -20px;
+      bottom: 10rem;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    margin-right: .5rem;
+    letter-spacing: 3px;
+    font-size: 1.2rem
+  }
+  color: $text-tertiary;
+  text-transform: uppercase;
+  img {
+    margin: 0 .5rem;
+    width: 50%;
+  }
+}
