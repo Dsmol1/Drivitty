@@ -49,8 +49,6 @@ section#product-features {
       img {
         width: 50%;
         width: 50%\0/ !important;
-        width: -moz-available;   
-        width: -webkit-fill-available;
         margin-left: 2.6rem;
         @include responsive(md) {
           margin-left: 4.6rem;

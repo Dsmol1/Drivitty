@@ -43,7 +43,7 @@
 
 									<!-- Features image -->
 			            <div class="col-12 col-lg-4 offset-lg-1">
-			              <div class="features__phone d-flex justify-content-center mt-lg-4">
+			              <div class="features__phone d-flex justify-content-center align-items-start mt-lg-4">
 			                <img src="<?php bloginfo('template_directory'); ?>/assets/images/phone.png" alt="phone-image" class="">
 			              </div>
 			            </div>

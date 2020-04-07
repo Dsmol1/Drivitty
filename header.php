@@ -168,7 +168,7 @@
 						</div>
 
 						<div class="hero__bg col-lg-6 offset-lg-1 d-flex py-4 py-lg-0">
-							<img class="w-100" src="<?php bloginfo('template_directory'); ?>/assets/images/hero.png" alt="hero__image">
+							<img class="w-100 h-100" src="<?php bloginfo('template_directory'); ?>/assets/images/hero.png" alt="hero__image">
 						</div>
 					</div>
 				</div>
