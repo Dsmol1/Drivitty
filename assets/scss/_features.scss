@@ -16,7 +16,6 @@ section#product-features {
         padding: 0 15px;
       }
       &__item {
-        // min-height: 160px;
         text-align: center;
         &--height {
           min-height: 70px;
@@ -26,10 +25,8 @@ section#product-features {
           }
         }
         @include responsive(lg) {
-          // min-height: 200px;
           text-align: left;
           @include responsive(xl) {
-            // min-height: 150px;
             text-align: left;
           }
         }
@@ -52,6 +49,8 @@ section#product-features {
       img {
         width: 50%;
         width: 50%\0/ !important;
+        width: -moz-available;   
+        width: -webkit-fill-available;
         margin-left: 2.6rem;
         @include responsive(md) {
           margin-left: 4.6rem;
